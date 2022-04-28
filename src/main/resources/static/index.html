@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title>index</title>
+        <style>
+            a {
+                text-decoration: none;
+            }
+            li {
+                list-style-type: none;
+                font-size: 30px;
+                padding-bottom: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <td width="40%">
+                <ul>
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="/logout">Logout</a></li>
+                    <li><a href="/register">Register</a></li>
+                    <li><a href="/test">Test</a></li>
+                    <li><a href="/users">Users list</a></li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li>
+                        Login POST
+                        <form action="/login" method="post">
+                            <p><label>email<input type="text" name="email"></label></p>
+                            <p><label>pass<input type="text" name="password"></label></p>
+                            <input type="submit" value="Log in">
+                        </form>
+                    </li>
+                    <li>
+                        Logout POST
+                        <form action="/logout" method="post">
+                            <input type="submit" value="Log out">
+                        </form>
+                    </li>
+                    <li>
+                        Register POST
+                        <form action="/register" method="post">
+                            <p><label>email<input type="text" name="email"></label></p>
+                            <p><label>pass<input type="text" name="password"></label></p>
+                            <input type="submit" value="Add user">
+                        </form>
+                    </li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li>
+                        User update
+                        <form action="/users" method="put">
+                            <p><label>id<input type="number" name="id"></label></p>
+                            <p><label>name<input type="text" name="username"></label></p>
+                            <p><label>birthday<input type="date" name="birthday" pattern="\d{4}-\d{2}-\d{2}"></label></p>
+                            <p><label>gender<input type="text" name="gender"></label></p>
+                            <p><label>height<input type="number" name="height"></label></p>
+                            <p><label>weight<input type="number" name="weight"></label></p>
+                            <input type="submit" name="Update user">
+                        </form>
+                    </li>
+                </ul>
+            </td>
+        </table>
+    </body>
+</html>
